@@ -81,7 +81,6 @@ $(BUILD_DIR_CM4)/%.bin: $(BUILD_DIR_CM4)/%.elf | $(BUILD_DIR_CM4)
 
 # Create the build directory if it does not exist
 $(BUILD_DIR_CM4):
-	@echo "Start building for CM7....."
 	mkdir $@
 
 # Phony targets for building and cleaning the project
