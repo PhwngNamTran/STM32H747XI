@@ -1,5 +1,5 @@
-#ifndef MISCELLANEOUS_H_
-#define MISCELLANEOUS_H_
+#ifndef MISCELLANEOUS_H
+#define MISCELLANEOUS_H
 
 #include "standard_libs.h"
 

@@ -1,5 +1,5 @@
-#ifndef STANDARD_LIBS_H_
-#define STANDARD_LIBS_H_
+#ifndef STANDARD_LIBS_H
+#define STANDARD_LIBS_H
 
 #include <stdint.h>
 #include <stdbool.h>

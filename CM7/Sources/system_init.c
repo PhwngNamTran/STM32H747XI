@@ -1,4 +1,4 @@
-#include "CM7_init.h"
+#include "system_init.h"
 /*
  * Function: System_Init
  * ---------------------

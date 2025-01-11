@@ -1,5 +1,5 @@
-#ifndef CM4_INIT_H
-#define CM4_INIT_H
+#ifndef SYSTEM_INIT_H
+#define SYSTEM_INIT_H
 
 /*
  * System Initialization:
@@ -7,6 +7,7 @@
  * This header file declares functions for initializing the system and peripherals.
  */
 
+#define CORE_CM7
 
 extern void System_Init(void);         /**< Initialize the system */
 
