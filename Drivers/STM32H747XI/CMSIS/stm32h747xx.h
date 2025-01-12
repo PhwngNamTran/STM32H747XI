@@ -216,7 +216,7 @@ typedef enum
 
 #define SMPS       /*!< Switched mode power supply feature */
 
-#include "system_init.h"
+#include "project_config.h"
 /**
   * @brief Configuration of the Cortex-M4/ Cortex-M7 Processor and Core Peripherals
    */
