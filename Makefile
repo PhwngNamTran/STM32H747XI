@@ -13,7 +13,6 @@ CM7:
 	$(MAKE) -f Makefile_CM7 CM7
 	@echo "CM7 has been built successfully !"
 
-
 # Target to build CM4 configuration
 CM4:
 	@echo "Start building CM4"
