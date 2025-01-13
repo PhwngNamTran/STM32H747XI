@@ -1,13 +1,12 @@
 #include "project_init.h"
 
-/*
- * Function: System_Init
- * ---------------------
- * Initializes the system
- */
-void system_init(void)
+void System_Init(void)
 {
     // Implement initialization code here
 }
 
+void Peripherals_Init(void)
+{
+    // Implement initialization code here
+}
 
