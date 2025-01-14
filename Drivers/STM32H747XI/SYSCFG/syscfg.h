@@ -6,6 +6,6 @@
 #include "standard_libs.h"
 #include "gpio.h"
 
-extern ReturnType SYSCFG_EXITx_GPIO_Config(GPIO_TypeDef *GPIOx, GPIO_Pin_N pin);
+ReturnType SYSCFG_EXITx_GPIO_Config(GPIO_TypeDef *GPIOx, GPIO_Pin_N pin);
 
 #endif

@@ -111,13 +111,13 @@ typedef enum
     GPIO_Locked_N            /*!< GPIO Locked */
 } GPIO_Lock_N;
 
-extern ReturnType GPIO_Mode_Set(GPIO_TypeDef *GPIOx, GPIO_Pin_N pin, GPIO_Mode_N mode);
-extern ReturnType GPIO_OutputType_Set(GPIO_TypeDef *GPIOx, GPIO_Pin_N pin, GPIO_OutputType_N outputtype);
-extern ReturnType GPIO_Pull_Set(GPIO_TypeDef *GPIOx, GPIO_Pin_N pin, GPIO_Pull_N pull);
-extern ReturnType GPIO_Alternate_Function_Set(GPIO_TypeDef *GPIOx, GPIO_Pin_N pin, GPIO_AlternateFunction_N AFx);
-extern boolean    GPIO_OutputData_Get(GPIO_TypeDef *GPIOx, GPIO_Pin_N pin);
-extern ReturnType GPIO_OutputData_Set(GPIO_TypeDef *GPIOx, GPIO_Pin_N pin);
-extern ReturnType GPIO_OutputData_Reset(GPIO_TypeDef *GPIOx, GPIO_Pin_N pin);
-extern ReturnType GPIO_OutputData_Toggle(GPIO_TypeDef *GPIOx, GPIO_Pin_N pin);
+ReturnType GPIO_Mode_Set(GPIO_TypeDef *GPIOx, GPIO_Pin_N pin, GPIO_Mode_N mode);
+ReturnType GPIO_OutputType_Set(GPIO_TypeDef *GPIOx, GPIO_Pin_N pin, GPIO_OutputType_N outputtype);
+ReturnType GPIO_Pull_Set(GPIO_TypeDef *GPIOx, GPIO_Pin_N pin, GPIO_Pull_N pull);
+ReturnType GPIO_Alternate_Function_Set(GPIO_TypeDef *GPIOx, GPIO_Pin_N pin, GPIO_AlternateFunction_N AFx);
+boolean    GPIO_OutputData_Get(GPIO_TypeDef *GPIOx, GPIO_Pin_N pin);
+ReturnType GPIO_OutputData_Set(GPIO_TypeDef *GPIOx, GPIO_Pin_N pin);
+ReturnType GPIO_OutputData_Reset(GPIO_TypeDef *GPIOx, GPIO_Pin_N pin);
+ReturnType GPIO_OutputData_Toggle(GPIO_TypeDef *GPIOx, GPIO_Pin_N pin);
 
 #endif

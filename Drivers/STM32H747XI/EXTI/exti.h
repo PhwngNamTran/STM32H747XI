@@ -125,22 +125,22 @@ typedef enum
 } EXTI_EventInput_N;
 
 
-extern ReturnType EXTI_EventInput_Interrupt_Enable_CPU1(EXTI_EventInput_N EventInput);
-extern ReturnType EXTI_EventInput_Interrupt_Enable_CPU2(EXTI_EventInput_N EventInput);
+ReturnType EXTI_EventInput_Interrupt_Enable_CPU1(EXTI_EventInput_N EventInput);
+ReturnType EXTI_EventInput_Interrupt_Enable_CPU2(EXTI_EventInput_N EventInput);
 
-extern ReturnType EXTI_EventInput_Interrupt_Disable_CPU1(EXTI_EventInput_N EventInput);
-extern ReturnType EXTI_EventInput_Interrupt_Disable_CPU2(EXTI_EventInput_N EventInput);
+ReturnType EXTI_EventInput_Interrupt_Disable_CPU1(EXTI_EventInput_N EventInput);
+ReturnType EXTI_EventInput_Interrupt_Disable_CPU2(EXTI_EventInput_N EventInput);
 
-extern ReturnType EXTI_Clear_Trigger_Request_Flag_CPU1(EXTI_EventInput_N EventInput);
-extern ReturnType EXTI_Clear_Trigger_Request_Flag_CPU2(EXTI_EventInput_N EventInput);
+ReturnType EXTI_Clear_Trigger_Request_Flag_CPU1(EXTI_EventInput_N EventInput);
+ReturnType EXTI_Clear_Trigger_Request_Flag_CPU2(EXTI_EventInput_N EventInput);
 
-extern boolean    EXTI_Trigger_Request_Occurred_CPU1_B(EXTI_EventInput_N EventInput);
-extern boolean    EXTI_Trigger_Request_Occurred_CPU2_B(EXTI_EventInput_N EventInput);
+boolean    EXTI_Trigger_Request_Occurred_CPU1_B(EXTI_EventInput_N EventInput);
+boolean    EXTI_Trigger_Request_Occurred_CPU2_B(EXTI_EventInput_N EventInput);
 
-extern ReturnType EXTI_Rising_Trigger_Enable(EXTI_EventInput_N EventInput);
-extern ReturnType EXTI_Rising_Trigger_Disable(EXTI_EventInput_N EventInput);
+ReturnType EXTI_Rising_Trigger_Enable(EXTI_EventInput_N EventInput);
+ReturnType EXTI_Rising_Trigger_Disable(EXTI_EventInput_N EventInput);
 
-extern ReturnType EXTI_Falling_Trigger_Enable(EXTI_EventInput_N EventInput);
-extern ReturnType EXTI_Falling_Trigger_Disable(EXTI_EventInput_N EventInput);
+ReturnType EXTI_Falling_Trigger_Enable(EXTI_EventInput_N EventInput);
+ReturnType EXTI_Falling_Trigger_Disable(EXTI_EventInput_N EventInput);
 
 #endif

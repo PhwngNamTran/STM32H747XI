@@ -1,12 +1,19 @@
 #ifndef BUTTON_H
 #define BUTTON_H
 
-#include "gpio.h"
 #include "stm32h747xx.h"
+#include "gpio.h"
+#include "exti.h"
+#include "syscfg.h"
 
 typedef struct {
-    GPIO_TypeDef*   port;
-    uint16_t        pin;
+    GPIO_TypeDef*       port;
+    uint16_t            pin;
+    EXTI_EventInput_N   exti;
+    IRQn_Type           IRQn;
 } Button_TypeDef;
+
+void Button_Init(Button_TypeDef button);
+void Button_Interrupt_Config(Button_TypeDef button);
 
 #endif
