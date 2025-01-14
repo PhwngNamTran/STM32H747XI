@@ -6,26 +6,26 @@
 #include "standard_libs.h"
 
 /**
-  * @brief   Enum for GPIO Pins
+  * @brief   Enum for GPIO pins
   */
 typedef enum
 {
-    GPIO_PIN_0_N = 0U,  /*!< GPIO Pin 0 */
-    GPIO_PIN_1_N,       /*!< GPIO Pin 1 */
-    GPIO_PIN_2_N,       /*!< GPIO Pin 2 */
-    GPIO_PIN_3_N,       /*!< GPIO Pin 2 */
-    GPIO_PIN_4_N,       /*!< GPIO Pin 2 */
-    GPIO_PIN_5_N,       /*!< GPIO Pin 2 */
-    GPIO_PIN_6_N,       /*!< GPIO Pin 2 */
-    GPIO_PIN_7_N,       /*!< GPIO Pin 2 */
-    GPIO_PIN_8_N,       /*!< GPIO Pin 2 */
-    GPIO_PIN_9_N,       /*!< GPIO Pin 2 */
-    GPIO_PIN_10_N,      /*!< GPIO Pin 2 */
-    GPIO_PIN_11_N,      /*!< GPIO Pin 2 */
-    GPIO_PIN_12_N,      /*!< GPIO Pin 2 */
-    GPIO_PIN_13_N,      /*!< GPIO Pin 2 */
-    GPIO_PIN_14_N,      /*!< GPIO Pin 2 */
-    GPIO_PIN_15_N       /*!< GPIO Pin 2 */
+    GPIO_PIN_0_N = 0U,  /*!< GPIO pin 0 */
+    GPIO_PIN_1_N,       /*!< GPIO pin 1 */
+    GPIO_PIN_2_N,       /*!< GPIO pin 2 */
+    GPIO_PIN_3_N,       /*!< GPIO pin 2 */
+    GPIO_PIN_4_N,       /*!< GPIO pin 2 */
+    GPIO_PIN_5_N,       /*!< GPIO pin 2 */
+    GPIO_PIN_6_N,       /*!< GPIO pin 2 */
+    GPIO_PIN_7_N,       /*!< GPIO pin 2 */
+    GPIO_PIN_8_N,       /*!< GPIO pin 2 */
+    GPIO_PIN_9_N,       /*!< GPIO pin 2 */
+    GPIO_PIN_10_N,      /*!< GPIO pin 2 */
+    GPIO_PIN_11_N,      /*!< GPIO pin 2 */
+    GPIO_PIN_12_N,      /*!< GPIO pin 2 */
+    GPIO_PIN_13_N,      /*!< GPIO pin 2 */
+    GPIO_PIN_14_N,      /*!< GPIO pin 2 */
+    GPIO_PIN_15_N       /*!< GPIO pin 2 */
 } GPIO_Pin_N;
 
 /**
@@ -111,13 +111,13 @@ typedef enum
     GPIO_Locked_N            /*!< GPIO Locked */
 } GPIO_Lock_N;
 
-extern ReturnType GPIO_Mode_Set(GPIO_TypeDef *GPIOx, GPIO_Pin_N Pin, GPIO_Mode_N Mode);
-extern ReturnType GPIO_OutputType_Set(GPIO_TypeDef *GPIOx, GPIO_Pin_N Pin, GPIO_OutputType_N OutputType);
-extern ReturnType GPIO_Pull_Set(GPIO_TypeDef *GPIOx, GPIO_Pin_N Pin, GPIO_Pull_N Pull);
-extern ReturnType GPIO_Alternate_Function_Set(GPIO_TypeDef *GPIOx, GPIO_Pin_N Pin, GPIO_AlternateFunction_N AFx);
-extern boolean    GPIO_OutputData_Get(GPIO_TypeDef *GPIOx, GPIO_Pin_N Pin);
-extern ReturnType GPIO_OutputData_Set(GPIO_TypeDef *GPIOx, GPIO_Pin_N Pin);
-extern ReturnType GPIO_OutputData_Reset(GPIO_TypeDef *GPIOx, GPIO_Pin_N Pin);
-extern ReturnType GPIO_OutputData_Toggle(GPIO_TypeDef *GPIOx, GPIO_Pin_N Pin);
+extern ReturnType GPIO_Mode_Set(GPIO_TypeDef *GPIOx, GPIO_Pin_N pin, GPIO_Mode_N mode);
+extern ReturnType GPIO_OutputType_Set(GPIO_TypeDef *GPIOx, GPIO_Pin_N pin, GPIO_OutputType_N outputtype);
+extern ReturnType GPIO_Pull_Set(GPIO_TypeDef *GPIOx, GPIO_Pin_N pin, GPIO_Pull_N pull);
+extern ReturnType GPIO_Alternate_Function_Set(GPIO_TypeDef *GPIOx, GPIO_Pin_N pin, GPIO_AlternateFunction_N AFx);
+extern boolean    GPIO_OutputData_Get(GPIO_TypeDef *GPIOx, GPIO_Pin_N pin);
+extern ReturnType GPIO_OutputData_Set(GPIO_TypeDef *GPIOx, GPIO_Pin_N pin);
+extern ReturnType GPIO_OutputData_Reset(GPIO_TypeDef *GPIOx, GPIO_Pin_N pin);
+extern ReturnType GPIO_OutputData_Toggle(GPIO_TypeDef *GPIOx, GPIO_Pin_N pin);
 
 #endif
