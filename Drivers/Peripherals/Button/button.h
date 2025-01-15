@@ -8,7 +8,7 @@
 
 typedef struct {
     GPIO_TypeDef*       port;
-    uint16_t            pin;
+    GPIO_Pin_N          pin;
     EXTI_EventInput_N   exti;
     IRQn_Type           IRQn;
 } Button_TypeDef;

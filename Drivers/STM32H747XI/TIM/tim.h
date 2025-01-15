@@ -6,32 +6,6 @@
 #include "standard_libs.h"
 
 /**
-  * @brief  TIM Handle structures definition
-  */
-typedef struct
-{
-  TIM_TypeDef                  *Instance;           /*!< Register base address                             */
-  TIM_Init_ST                  Init;                /*!< TIM Time Base required parameters                 */
-  TIM_ActiveChannel_N          Channel;             /*!< Active channel                                    */
-  volatile TIM_State_N         State;               /*!< TIM operation state                               */
-  volatile TIM_ChannelState_N  ChannelState[6];     /*!< TIM channel operation state                       */
-  volatile TIM_ChannelState_N  ChannelNState[4];    /*!< TIM complementary channel operation state         */
-  volatile TIM_DMABurstState_N DMABurstState;       /*!< DMA burst operation state                         */
-} TIM_Handle_ST;
-
-/**
-  * @brief  TIM Init structures definition
-  */
-typedef struct
-{
-  uint32_t            Prescaler;
-  TIM_CounterMode_N   CounterMode;
-  uint32_t            Period;
-  TIM_ClockDivision_N ClockDivision;
-  uint32_t            AutoReloadPreload;
-} TIM_Init_ST;
-
-/**
   * @brief  TIM Counter Mode structures definition
   */
 typedef enum
@@ -161,6 +135,32 @@ typedef enum
   DMA_BURST_STATE_READY_N = 0x01U,    /*!< DMA Burst ready for use */
   DMA_BURST_STATE_BUSY_N  = 0x02U     /*!< Ongoing DMA Burst       */
 } TIM_DMABurstState_N;
+
+/**
+  * @brief  TIM Init structures definition
+  */
+typedef struct
+{
+  uint32_t            Prescaler;
+  TIM_CounterMode_N   CounterMode;
+  uint32_t            Period;
+  TIM_ClockDivision_N ClockDivision;
+  uint32_t            AutoReloadPreload;
+} TIM_Init_ST;
+
+/**
+  * @brief  TIM Handle structures definition
+  */
+typedef struct
+{
+  TIM_TypeDef                  *Instance;           /*!< Register base address                             */
+  TIM_Init_ST                  Init;                /*!< TIM Time Base required parameters                 */
+  TIM_ActiveChannel_N          Channel;             /*!< Active channel                                    */
+  volatile TIM_State_N         State;               /*!< TIM operation state                               */
+  volatile TIM_ChannelState_N  ChannelState[6];     /*!< TIM channel operation state                       */
+  volatile TIM_ChannelState_N  ChannelNState[4];    /*!< TIM complementary channel operation state         */
+  volatile TIM_DMABurstState_N DMABurstState;       /*!< DMA burst operation state                         */
+} TIM_Handle_ST;
 
 extern ReturnType TIM_Config(TIM_TypeDef *Timx);
 

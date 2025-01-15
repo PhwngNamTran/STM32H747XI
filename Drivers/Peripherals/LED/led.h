@@ -6,7 +6,7 @@
 
 typedef struct {
     GPIO_TypeDef*   port;
-    uint16_t        pin;
+    GPIO_Pin_N      pin;
 } LED_TypeDef;
 
 void LED_Init(LED_TypeDef led);   /**< Initialize LEDs */
