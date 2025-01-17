@@ -8,4 +8,6 @@
 #define LED_3_USED
 #define LED_4_USED
 
+#define WK_BUTTON_USED
+
 #endif
