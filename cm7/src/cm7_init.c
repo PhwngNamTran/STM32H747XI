@@ -1,4 +1,4 @@
-#include "project_init.h"
+#include "cm7_init.h"
 
 void System_Init(void)
 {
