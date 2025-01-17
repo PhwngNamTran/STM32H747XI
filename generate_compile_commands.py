@@ -12,9 +12,9 @@ def find_files(ext, directories):
 # Project-specific configurations
 cm7_dir = "cm7"
 driver_dir = "drivers"
-core_dir = "core"
+common_dir = "common"
 build_dir = "_out/cm7"
-directories = [cm7_dir, core_dir, driver_dir]
+directories = [cm7_dir, common_dir, driver_dir]
 
 c_sources = find_files(".c", directories)
 include_dirs = list(set(os.path.dirname(f) for f in find_files(".h", directories)))
