@@ -2,6 +2,6 @@
 
 #ifdef WK_BUTTON_USED
 
-Button_TypeDef WK_Button = {WK_Button_Port, WK_Button_PIN, WK_Button_EXTI, WK_Button_IRQn};
+Button_TypeDef wk_button = {wk_button_PORT, wk_button_PIN, wk_button_EXTI, wk_button_IRQn};
 
 #endif
