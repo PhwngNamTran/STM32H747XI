@@ -1,12 +1,12 @@
 # Define the target name for CM7 core
-TARGET_CM7 = STM32H747XI_CM7
+TARGET_CM7 = stm32h747xi_cm7
 
 # Define the linker script location and chip architecture
-LD_SCRIPT_CM7 = CM7/Linker_STM32H747XI_CM7.ld
+LD_SCRIPT_CM7 = cm7/core/ld/linker_stm32h747xi_cm7.ld
 MCU_SPEC_M7 = cortex-m7
 
 # Define directories for CM7 and common files
-CM7_DIR = CM7
+CM7_DIR = cm7
 COMMON_DIR = drivers
 
 # Find all source, header, and assembly files in the specified directories
@@ -15,7 +15,7 @@ ASM_SOURCES_CM7 = $(shell find $(CM7_DIR) $(COMMON_DIR) -name "*.s")
 HEADERS_CM7 = $(shell find $(CM7_DIR) $(COMMON_DIR) -name "*.h")
 
 # Define the build directory for CM7
-BUILD_DIR_CM7 = _out/CM7
+BUILD_DIR_CM7 = _out/cm7
 
 # ARM Toolchain definitions
 CC = arm-none-eabi-gcc
@@ -84,8 +84,8 @@ $(BUILD_DIR_CM7):
 	mkdir $@
 
 # Phony targets for building and cleaning the project
-.PHONY: CM7 clean
-CM7: $(BUILD_DIR_CM7)/$(TARGET_CM7).bin
+.PHONY: cm7 clean
+cm7: $(BUILD_DIR_CM7)/$(TARGET_CM7).bin
 
 # Clean the build directory
 clean:

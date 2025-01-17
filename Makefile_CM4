@@ -1,12 +1,12 @@
 # Define the target name for CM4 core
-TARGET_CM4 = STM32H747XI_CM4
+TARGET_CM4 = stm32h747xi_cm4
 
 # Define the linker script location and chip architecture
-LD_SCRIPT_CM4 = CM4/Linker_STM32H747XI_CM4.ld
+LD_SCRIPT_CM4 = cm4/core/ld/linker_stm32h747xi_cm4.ld
 MCU_SPEC_M4 = cortex-m4
 
 # Define directories for CM4 and common files
-CM4_DIR = CM4
+CM4_DIR = cm4
 COMMON_DIR = drivers
 
 # Find all source, header, and assembly files in the specified directories
@@ -15,7 +15,7 @@ ASM_SOURCES_CM4 = $(shell find $(CM4_DIR) $(COMMON_DIR) -name "*.s")
 HEADERS_CM4 = $(shell find $(CM4_DIR) $(COMMON_DIR) -name "*.h")
 
 # Define the build directory for CM4
-BUILD_DIR_CM4 = _out/CM4
+BUILD_DIR_CM4 = _out/cm4
 
 # ARM Toolchain definitions
 CC = arm-none-eabi-gcc
@@ -84,8 +84,8 @@ $(BUILD_DIR_CM4):
 	mkdir $@
 
 # Phony targets for building and cleaning the project
-.PHONY: CM4 clean
-CM4: $(BUILD_DIR_CM4)/$(TARGET_CM4).bin
+.PHONY: cm4 clean
+cm4: $(BUILD_DIR_CM4)/$(TARGET_CM4).bin
 
 # Clean the build directory
 clean:

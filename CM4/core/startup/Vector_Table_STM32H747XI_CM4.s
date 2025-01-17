@@ -183,7 +183,6 @@ g_pfnVectors:
 
 .size  g_pfnVectors, .-g_pfnVectors
 
-
 .section .text.Default_Handler,"ax",%progbits
 Default_Handler:
     Infinite_Loop:
