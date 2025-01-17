@@ -3,10 +3,11 @@
 
 #include "miscellaneous.h"
 
-#define LED_1_USED
-#define LED_2_USED
-#define LED_3_USED
-#define LED_4_USED
+/* USER LED: Define which userled be used */
+#define USERLED_1_USED
+// #define USERLED_2_USED
+// #define USERLED_3_USED
+// #define USERLED_4_USED
 
 #define WK_BUTTON_USED
 

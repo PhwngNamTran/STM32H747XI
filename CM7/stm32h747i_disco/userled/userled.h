@@ -4,29 +4,29 @@
 #include "led.h"
 #include "hardware_cfg.h"
 
-/* LED GPIO Configuration */
-#define LED_Port        GPIOI         /**< LED GPIO Port */
-
-/* LED Pin Definitions */
-#define LED_1_PIN       12U /**< LED 1 Pin */
-#define LED_2_PIN       13U /**< LED 2 Pin */
-#define LED_3_PIN       14U /**< LED 3 Pin */
-#define LED_4_PIN       15U /**< LED 4 Pin */
-
-#ifdef LED_1_USED
-extern LED_TypeDef LED_1;
+#if defined (USERLED_1_USED) || defined (USERLED_2_USED) || defined (USERLED_3_USED) || defined (USERLED_4_USED)
+#define USERLED_Port        GPIOI
 #endif
 
-#ifdef LED_2_USED
-extern LED_TypeDef LED_2;
+
+#if defined (USERLED_1_USED)
+#define USERLED_1_PIN  GPIO_PIN_12_N 
+extern LED_TypeDef userled_1;
 #endif
 
-#ifdef LED_3_USED
-extern LED_TypeDef LED_3;
+#if defined (USERLED_2_USED)
+#define USERLED_2_PIN  GPIO_PIN_13_N
+extern LED_TypeDef userled_2;
 #endif
 
-#ifdef LED_4_USED
-extern LED_TypeDef LED_4;
+#if defined (USERLED_3_USED)
+#define USERLED_3_PIN  GPIO_PIN_14_N
+extern LED_TypeDef userled_3;
+#endif
+
+#if defined (USERLED_4_USED)
+#define USERLED_4_PIN  GPIO_PIN_15_N
+extern LED_TypeDef userled_4;
 #endif
 
 #endif
