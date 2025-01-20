@@ -12,6 +12,7 @@
  */
 void LED_Init(LED_TypeDef led)
 {
+    RCC_GPIO_Clock_Enable(led.port);
     GPIO_Mode_Set(led.port, led.pin, GPIO_Mode_General_Purpose_Output_N);
     GPIO_Pull_Set(led.port, led.pin, GPIO_No_Pull_N);
     GPIO_OutputType_Set(led.port, led.pin, GPIO_Output_PushPull_N);

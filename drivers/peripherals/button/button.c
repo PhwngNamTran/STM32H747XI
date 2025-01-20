@@ -9,6 +9,7 @@
  */
 void Button_Init(Button_TypeDef button)
 {
+    RCC_GPIO_Clock_Enable(button.port);
     GPIO_Mode_Set(button.port, button.pin, GPIO_Mode_Input_N);
     GPIO_Pull_Set(button.port, button.pin, GPIO_No_Pull_N);
 }

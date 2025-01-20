@@ -5,6 +5,7 @@
 #include "gpio.h"
 #include "exti.h"
 #include "syscfg.h"
+#include "rcc.h"
 
 typedef struct {
     GPIO_TypeDef*       port;
