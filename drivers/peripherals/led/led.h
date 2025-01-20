@@ -3,6 +3,7 @@
 
 #include "gpio.h"
 #include "stm32h747xx.h"
+#include "rcc.h"
 
 typedef struct {
     GPIO_TypeDef*   port;
