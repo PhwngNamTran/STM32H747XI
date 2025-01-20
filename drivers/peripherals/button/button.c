@@ -14,6 +14,23 @@ void Button_Init(Button_TypeDef button)
 }
 
 /*
+ * Function: Button_GetState
+ * -------------------------
+ * Checks the status of the Button.
+ *
+ * Returns:
+ *   Button state:
+ *   - C_Button_Released_N (0): Button released.
+ *   - C_Button_Pressed_N (1): Button pressed.
+ */
+ButtonState_N Button_GetState(Button_TypeDef button)
+{
+    ButtonState_N l_Button_State_N = C_Button_Released_N;
+    l_Button_State_N = (ButtonState_N)CHECK_BIT(button.port->IDR, (0x1 << button.pin));
+    return l_Button_State_N;
+}
+
+/*
  * Function: Button_Interrupt_Config
  * ----------------------------------
  * - Configures EXTI GPIO for utton.
